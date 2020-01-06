@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="オリケシデザイナー">
+    <link rel="stylesheet" href="main.css">
+    <title>オリケシデザイナー</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="editor"></div>
+      <div class="preview"></div>
+      <svg class="scroll" x="0" y="0" width="128" height="128" viewBox="-64 -64 128 128">
+        <defs>
+          <symbol id="scroll-btn" viewBox="-32 -32 64 64" stroke="#888">
+            <circle cx="0" cy="0" r="20" fill="#eee" />
+            <polygon points="0,-16 13.85,8 -13.85,8" fill="white" />
+          </symbol>
+        </defs>
+        <use class="button" href="#scroll-btn" x="-32" y="-32" width="64" height="64"
+             transform="translate(-38,0) rotate(-90)" data-event="scroll" data-value="{x:-1,y:0}" />
+        <use class="button" href="#scroll-btn" x="-32" y="-32" width="64" height="64"
+             transform="translate(38,0) rotate(90)" data-event="scroll" data-value="{x:1,y:0}" />
+        <use class="button" href="#scroll-btn" x="-32" y="-32" width="64" height="64"
+             transform="translate(0,-38)" data-event="scroll" data-value="{x:0,y:-1}" />
+        <use class="button" href="#scroll-btn" x="-32" y="-32" width="64" height="64"
+             transform="translate(0,38) rotate(180)" data-event="scroll" data-value="{x:0,y:1}" />
+      </svg>
+      <div class="colors">
+        <div class="message">色を選んでください。</div>
+        <div class="palette"></div>
+        <div class="color">白色</div>
+      </div>
+      <div class="gallery">
+        <div class="message">編集する絵柄を選んでください。</div>
+        <div class="stocks">
+          <div class="stock"></div>
+          <div class="stock"></div>
+          <div class="stock"></div>
+          <div class="stock"></div>
+          <div class="stock"></div>
+          <div class="stock"></div>
+          <div class="stock"></div>
+          <div class="stock"></div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
